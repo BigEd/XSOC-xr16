@@ -1,0 +1,10 @@
+[general]
+bbox=160,200
+long_comment=2-1 mux with force constant 0/1, floorplanned 1/2Rx1C
+$file=M2_1K.sch
+[ports]
+A=INPUT,L160
+B=INPUT,L120
+SEL=INPUT,L80
+K=INPUT,L40
+O=OUTPUT,R160

@@ -1,0 +1,9 @@
+[general]
+bbox=240,160
+long_comment=16-bit DFF w/ CE, floorplanned 8Rx1C
+$file=FD16E.sch
+[ports]
+D=INPUT,L120,15,0
+CE=INPUT,L80
+CLK=INPUT,L40
+Q=OUTPUT,R120,15,0

@@ -1,0 +1,131 @@
+issues-howto -- How to use the issues tracking system
+
+Copyright (C) 2000, Gray Research LLC.  All rights reserved.
+The contents of this file are subject to the XSOC License Agreement;
+you may not use this file except in compliance with this Agreement.
+See the LICENSE file.
+
+
+Issue Tracking File
+
+The file 'issues' tracks the status and history of all known issues.
+It consists of a sequence of issues records:
+
+area            ::= { doc|lcc-xr16|xr16asm|xr16iss|libxr16|xsoc|xr16cpu|misc }
+issue-type      ::= { not-impl | defect | suggestion | note | wish }
+resolution-type ::= { fixed | no-repro | by-design }
+
+Issue:	issue# <issue-type> <area> title
+Opened:	yy/mm/dd user@domain.com
+	Mandatory problem description, instructions and sources
+	to reproduce it.
+Owner:	yy/mm/dd developer@domain.com
+	Optional description of plan to address issue.
+Resolv:	yy/mm/dd <resolution-type> <xsoc-version> developer@domain.com
+	Description of issue resolution.  XSOC-version records which
+	version of the XSOC Project first received the fix.
+Closed:	yy/mm/dd mgmt@domain.com 
+	Optional description of how resolution was verified.
+2+ newlines
+
+Description of issue fields
+Areas
+	doc			documentation
+	lcc-xr16	compiler
+	xr16asm		assembler
+	xr16iss		instruction set simulator
+	libxr16		runtime libraries
+	xsoc		XSOC system-on-chip design (incl. peripherals)
+	xr16cpu		xr16 CPU core
+	misc		anything else
+Issue-Types
+	not-impl	not implemented feature
+	defect		error, bug, misfeature
+	suggestion	suggestion
+	note		general comment 
+	wish		plea for change or new feature
+Resolution-Types
+	fixed		issue was fixed
+	no-repro	unable to reproduce issue, please resubmit or close
+	by-design	feature in question works as it should
+
+
+
+To report an issue, take ownership of an issue, report a resolution
+to the issue, or close the issue, send an issue message to
+fpga-cpu@egroups.com.
+
+(New Issue:)
+Subject: Issue: <issue-type> <area> title
+Mandatory problem description, instructions and sources
+to reproduce it, either inline in the message or as
+attachements.
+
+(Assignment or reassignment:)
+Subject: Assign: issue# title
+Optional description of plan to address issue.
+
+(Resolution:)
+Subject: Resolve: [fixed|norepro|bydesign] i title
+Optional description of issue resolution.
+
+(Closure:)
+Subject: Closed: issue# title
+Optional description of how resolution was verified.
+
+
+Example issue scenario
+
+1. User emails a new Issue
+
+	To: fpga-cpu@egroups.com
+	From: user@users.com
+	Subject: Issue: defect lcc-xr16 long multiply is broken
+	This code doesn't work:
+	  int main() { long i = 2; return i*i; }
+
+2. Developer takes bug
+
+	To: fpga-cpu@egroups.com
+	From: dev@devs.com
+	Subject: Assign: 123 defect lcc-xr16 long multiply is broken
+	I know what's going on.  I'll fix it.
+
+3. Developer reports progress and/or more details
+
+	To: fpga-cpu@egroups.com
+	From: dev@devs.com
+	Subject: Assign: 123 defect lcc-xr16 long multiply is broken
+	I thought I knew what was wrong, but it turns out
+	even more is broken.  I'm going to fix the whole mess.
+
+4. Developer reports bug is fixed.
+
+	To: fpga-cpu@egroups.com
+	From: dev@devs.com
+	Subject: Resolved: fixed 123 defect lcc-xr16 long multiply is broken
+	The fix was to blah blah blah.
+
+5. Project manager checks the fix and closes the bug.
+
+	To: fpga-cpu@egroups.com
+	From: jan@fpgacpu.org
+	Subject: Closed: 123 defect lcc-xr16 long multiply is broken
+	Passes user's test and other new tests.
+
+Resulting issue record:
+
+	Issue:	123 defect lcc-xr16 long multiply is broken
+	Opened:	02/20/00 user@users.com
+		This code doesn't work:
+		  int main() { long i = 2; return i*i; }
+	Owner:	02/22/00 dev@devs.com
+		I know what's going on.  I'll fix it.
+	Owner:	02/22/00 dev@devs.com
+		I thought I knew what was wrong, but it turns out
+		even more is broken.  I'm going to fix the whole mess.
+	Resolv:	02/24/00 fixed dev@devs.com
+		The fix was to blah blah blah.
+	Closed:	02/26/00 mgmt@mgmt.com 
+		Passes user's test and other new tests.
+

@@ -1,0 +1,10 @@
+[general]
+bbox=240,200
+long_comment=16-bit 2-1 multiplexor with force 0, floorplanned 8Rx1C FMAP
+$file=M2_16Z.sch
+[ports]
+A=INPUT,L160,15,0
+B=INPUT,L120,15,0
+SEL=INPUT,L80
+O=OUTPUT,R160,15,0
+ZERO=INPUT,L40

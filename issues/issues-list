@@ -1,0 +1,28 @@
+open issues (12): 
+  2 not-impl lcc-xr16 long integers are not implemented 
+  3 not-impl xr16asm  far branch displacements are not implemented 
+  4 not-impl libxr16  most kinds of mul div and mod are not implemented 
+  5 not-impl libxr16  variable bit-count shifts are not implemented 
+  6 defect   xsoc     VGA only displays 560 pixels/line, not 576 
+  7 wish     libxr16  xr16 needs a C runtime library 
+  8 not-impl lcc-xr16 lcc-xr16 needs a test suite 
+  9 not-impl xr16asm  xr16 assembler/simulator needs a test suite 
+ 11 defect   xsoc     timespecs do not include async RAM delay offsets 
+ 14 wish     xsoc     XSOC/xr16 refloorplanned for XC4010XL 
+ 16 defect   doc      xspecs.pdf: b<cond> a,-32768 broken 
+ 17 defect   xr16iss  b<cond> a,-32768 broken 
+
+assigned issues (1): 
+ 10 not-impl xr16cpu  xr16 cpu needs a test suite 
+
+resolved issues (1): 
+ 20 defect   xsoc     problems building under Foundation 2.1i. 
+
+closed issues (6): 
+  1 note     doc      how to use the issues tracking system 
+ 12 wish     misc     issues tracking should include version number info 
+ 13 defect   xsoc     XSOC did not run on a v1.4+ board 
+ 15 defect   lcc-xr16 some unsigned hex consts promoted to long 
+ 18 defect   xr16asm  cmpi reg,-32768 broken 
+ 19 defect   xr16asm  cmpi reg,0 broken 
+

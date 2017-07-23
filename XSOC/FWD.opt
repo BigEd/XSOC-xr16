@@ -1,0 +1,11 @@
+[general]
+$file=FWD.sch
+short_comment=
+long_comment=Forwarding check
+reference=U
+ref_visible=1
+bbox=260,120
+[ports]
+RSRC=INPUT,L80,3,0
+RDEST=INPUT,L40,3,0
+FWD=OUTPUT,R80

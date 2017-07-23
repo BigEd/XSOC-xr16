@@ -1,0 +1,28 @@
+LOG -- The XSOC Project Release Log
+
+Copyright (C) 1999, 2000, Gray Research LLC.  All rights reserved.
+The contents of this file are subject to the XSOC License Agreement;
+you may not use this file except in compliance with this Agreement.
+See the LICENSE file.
+
+
+Date      Vers  Comments
+----      ----  --------
+04/03/00  0.93  Added xsocv.pdf, xsocv\ (synthesizable Verilog XSOC/xr16).
+				Added tests\ (xr16 test suite).
+				Added contrib file.
+				Updated Getting Started Guide, issues, and other files.
+				Fixed issues #10,15,18-20.
+
+
+03/20/00  0.92  Added doc\xsoc-talk.pdf
+				Misc fixes to Getting Started Guide: DOS prompts, PATHs.
+				Removed encryption from doc\*.pdf.
+				Fixed issues #12-13.
+
+
+03/13/00  0.91  Minor documentation fixes, most in Getting Started Guide
+
+
+03/01/00  0.90  First Beta Test release, accompanies first
+                Circuit Cellar article

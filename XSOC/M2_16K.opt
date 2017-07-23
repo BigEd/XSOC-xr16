@@ -1,0 +1,10 @@
+[general]
+bbox=260,200
+long_comment=16-bit 2-1 mux with 16 selects, 16 force constants, floorplanned 8Rx1C FMAP
+$file=M2_16K.sch
+[ports]
+A=INPUT,L160,15,0
+B=INPUT,L120,15,0
+SEL=INPUT,L80,15,0
+K=INPUT,L40,15,0
+O=OUTPUT,R160,15,0

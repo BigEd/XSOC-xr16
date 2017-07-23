@@ -1,0 +1,89 @@
+XSOC FAQ (Frequently Asked Questions) 1.00 3/1/2000
+
+Edited by Jan Gray (jan@fpgacpu.org)
+
+Copyright (C) 2000, Gray Research LLC.  All rights reserved.
+The contents of this file are subject to the XSOC License Agreement;
+you may not use this file except in compliance with this Agreement.
+See the LICENSE file.
+
+
+FPGA DEV TOOLS
+
+Q.  Has anyone built XSOC under Foundation 2.1i?
+A.  Yes, but see issue #20.
+
+
+Q.  I use Viewlogic tools.  Can I edit and rebuild XSOC?
+A.  We don't think so.  If you do manage to do so, please let
+    us know how it goes.
+
+
+Q.  Schematics are a drag.  Do you have a version in VHDL or Verilog?
+A.  Yes, as of release beta 0.93, XSOC includes a Verilog version of
+	the project.  It has been built under FPGA Express and it runs
+	in an XS40 board.  The whole design, including xr16, is about
+	1,000 lines of Verilog.  It has an almost identical footprint,
+	and so the entire XSOC system still fits nicely in an XC4005XL.
+
+WHICH XESS XS40 BOARD
+
+Q.  I am going to buy an XESS XS40 board.  Which one do you recommend?
+    An XS40-005XL or an XS40-010XL?  A standard 32 KB RAM version, or
+    the '+' board with 128 KB RAM?
+
+A.  Our advice is to buy the XS40+ -010XL board, with the larger XC4010XL
+    FPGA and 128 KB, if that fits into your budget.  The XSOC design
+    fills an XC4005XL to the brim, so you might find yourself getting
+    tight for space if you buy the -005XL. And by also springing for the
+    extra RAM, you'll be able to tackle larger projects and programs,
+    more peripherals, higher resolution or color video, and so forth.
+
+
+>16-BIT ADDRESSING
+
+Q.  A 16-bit address space is a drag.  How about an MMU?
+A.  It would be very easy to add an MMU to, for instance, map
+    A[15:12] to a physical address PA[25:12], plus a 'writeable
+    bit'.  See section 6.4 of the xr16 Specifications for a sketch
+    of one possible specification.  Actual implementation is left as
+    an exercise.
+
+
+Q.  A 16-bit address space is a drag.  How about a 32-bit version?
+A.  We have a 32-bit Verilog version "in the labs", xr32, but it has not
+    yet been simulated, nor run in hardware (we've been busy shipping
+    the present kit).  The xr32 has the same 16-bit instruction format
+    as xr16, although two of the three reserved opcodes are allocated to
+    ll and sl (load/store longword) instructions.  Stay tuned.
+
+
+PORTING TO OTHER FPGA ARCHITECTURES
+
+Q.  Is XSOC limited to XC4000E-derived FPGA families?
+A.  The current schematic version is tuned and floorplanned for
+    these FPGA architectures.  It makes use of device features including
+    H-function generators and it assumes an abundance of BUFTs (three-
+    state buffers driving long-line buses).  The Verilog version makes
+    fewer such assumptions and will likely prove easy to retarget,
+    at least to Virtex-derived FPGA families.  We hope that someone
+    will attempt to build XSOC, xr16, and/or xr32 on Altera families.
+
+
+LICENSING
+
+Q.  My organization would like to use xr16 in an application that is not
+    "non-commercial educational and research purposes".  What to do?
+A.  Such use is not permitted by the XSOC License Agreement (see the
+    LICENSE file).  As of this writing we are evaluating whether to
+    license XSOC for other purposes.  Please contact us directly (email
+    xsoc@fpgacpu.org) to discuss your specific situation.
+
+
+SUPPORT
+
+Q.  What kind of support can I expect?
+A.  If you assume none whatsoever then you won't be disappointed.
+A.  Reread the XSOC License Agreement.
+A.  The user community (fpga-cpu@egroups.com) may be able to help you.
+    See the Help! section in the Getting Started Guide.

@@ -1,0 +1,13 @@
+[general]
+$file=REGFILE.sch
+short_comment=
+long_comment=
+reference=U
+ref_visible=1
+bbox=260,200
+[ports]
+D=INPUT,L160,15,0
+A=INPUT,L120,3,0
+WE=INPUT,L80
+CLK=INPUT,L40
+Q=OUTPUT,R160,15,0

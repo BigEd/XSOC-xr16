@@ -1,0 +1,9 @@
+[general]
+bbox=240,160
+long_comment=16-bit 2-1 mux, floorplanned 8Rx1C, FMAP
+$file=M2_16.sch
+[ports]
+A=INPUT,L120,15,0
+B=INPUT,L80,15,0
+SEL=INPUT,L40
+O=OUTPUT,R120,15,0

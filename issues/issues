@@ -1,0 +1,335 @@
+issues -- issues database
+
+Copyright (C) 2000, Gray Research LLC.  All rights reserved.
+The contents of this file are subject to the XSOC License Agreement;
+you may not use this file except in compliance with this Agreement.
+See the LICENSE file.
+
+
+Issue:	1 note doc how to use the issues tracking system
+Opened:	02/26/00 jan@fpgacpu.org
+	See file issues-howto
+Closed:	02/26/00 jan@fpgacpu.org
+
+
+Issue:	2 not-impl lcc-xr16 long integers are not implemented
+Opened:	02/26/00 jan@fpgacpu.org
+	1. May need to revise long int pseudo-ops specification in xspecs.pdf.
+	2. Need to modify lcc-xr16's xr16.md to emit proper long int pseudo-ops.
+	3. Need to modify xr16asm to implement those pseudo-ops.
+	4. Need to write long int test suite.
+
+
+Issue:	3 not-impl xr16asm far branch displacements are not implemented
+Opened:	02/26/00 jan@fpgacpu.org
+	Repro: lcc-xr16 -o 3.hex -Wl-lst=3.lst 3.c
+	Errors:
+	xr16: branch displacement overflow at 0084 target 'L3'
+	xr16: branch displacement overflow at 01A2 target 'L2'
+
+
+Issue:	4 not-impl libxr16 most kinds of mul div and mod are not implemented
+Opened:	02/26/00 jan@fpgacpu.org
+	Currently only unsigned multiply is implemented.
+	Repro: lcc-xr16 -o 4.hex -Wl-lst=4.lst 4.c
+	Errors:
+	xr16: undefined symbol '_muli2'
+	xr16: undefined symbol '_divi2'
+	xr16: undefined symbol '_modi2'
+	xr16: undefined symbol '_divu2'
+	xr16: undefined symbol '_modu2'
+	xr16: undefined symbol '_muli4'
+	xr16: undefined symbol '_divi4'
+	xr16: undefined symbol '_modi4'
+	xr16: undefined symbol '_mulu4'
+	xr16: undefined symbol '_divu4'
+	xr16: undefined symbol '_modu4'
+
+
+Issue:	5 not-impl libxr16 variable bit-count shifts are not implemented
+Opened:	02/26/00 jan@fpgacpu.org
+	Repro: lcc-xr16 -o 5.hex -Wl-lst=5.lst 5.c
+	Errors:
+	xr16: undefined symbol '_sllr'
+	xr16: undefined symbol '_slllr'
+	xr16: undefined symbol '_srar'
+	xr16: undefined symbol '_srlr'
+	xr16: undefined symbol '_sralr'
+	xr16: undefined symbol '_srllr'
+
+
+Issue:	6 defect xsoc VGA only displays 560 pixels/line, not 576
+Opened:	02/26/00 jan@fpgacpu.org
+	There's something wrong with horizontal blanking with respect
+	to the video pixel shift pipeline, and so the VGA display does not
+	display the last 16 pixels/line.
+
+
+Issue:	7 wish libxr16 xr16 needs a C runtime library
+Opened:	02/26/00 jan@fpgacpu.org
+	This project needs a C runtime library.  We need one with full source,
+	that is 16-bit portable, and is compatible with the lcc C compiler.
+	The last time I looked most of the available CRTs depended upon
+	some GCC language extensions...
+
+
+Issue:	8 not-impl lcc-xr16 lcc-xr16 needs a test suite
+Opened:	02/26/00 jan@fpgacpu.org
+	There is no lcc-xr16 cross-compiler test suite yet.  Surely one could
+	be built using the xr16 simulator.
+
+
+Issue:	9 not-impl xr16asm xr16 assembler/simulator needs a test suite
+Opened:	02/26/00 jan@fpgacpu.org
+	There is no xr16 assembler/simulator test suite yet.
+
+
+Issue:	10 not-impl xr16cpu xr16 cpu needs a test suite
+Opened:	02/26/00 jan@fpgacpu.org
+	There is no xr16 test suite yet.  There should be a minimal one that
+	could be run in the Foundation simulator, and another, built upon
+	the first, that could be run in the actual hardware.
+Owner:	04/01/00 jan@fpgacpu.org
+	tests/xr16.s is a start.  It runs in the xr16 instruction set sim,
+	and in a Verilog simulator.  It still needs a test harness to run
+	in hardware.
+
+
+Issue:	11 defect xsoc timespecs do not include async RAM delay offsets
+Opened:	02/27/00 jan@fpgacpu.org
+	The various xsoc-*.ucf constraint files include timespecs which are
+	essential for optimizing placement and routing and for ensuring
+	the resulting design passes static timing analysis.
+	Current the XSOC UCF timespecs are not correct, because they do not
+	include OFFSET timings to account for the delay from the FPGA
+	address and control signals, through the RAMs, and back into the FPGA.
+	Even if trce reports the worst case cycle time is <41 ns, this does
+	not guarantee the design will run at the target cycle time of 80 ns
+	if we do not factor in this external delay through external RAM.
+
+
+Issue:	12 wish misc issues tracking should include version number info
+Opened:	02/27/00 jan@fpgacpu.org
+	It would be nice if each resolved or closed issue included the
+	XSOC version number in which the issue was first resolved.
+Resolv:	03/17/00 fixed 0.92 jan@fpgacpu.org
+	Done!
+Closed:	03/17/00 jan@fpgacpu.org
+
+
+Issue:	13 defect xsoc XSOC did not run on a v1.4+ board
+Opened:	03/17/00 jan@fpgacpu.org
+	Someone reports that XSOC (xsoc-10xl-13.bit) doesn't work on his XS40
+	v1.4+ board.  This is troubling because it works on mine.
+Owner:	03/17/00 jan@fpgacpu.org
+	It may have something to do with which version of XSTOOLS you are running.
+Resolv:	03/17/00 fixed 0.92 jan@fpgacpu.org
+	The problem does indeed have to do with which version of XSTOOLS
+	you are using.  In this case, we test XSOC with v1.2, v1.3, and
+	v1.4+ boards, but we had been doing so using a single installation
+	of XSTOOLS, apparently corresponding to a v1.3 board.  (Oops.)
+
+	For v1.4+ boards, the 0.91 design lets XA<15> and XA16 float high
+	via default weak pullups, and this worked because the (v1.3)
+	XSLOAD also let XA<15> and XA16 float high during load of the
+	.hex memory image.  The XSOC 0.91 design, which ran out of
+	logical address 0x0000, was actually running out of 'physical
+	address' 0x18000.
+
+	However, the user was (correctly) using the XSTOOLS for v1.4+
+	to XSLOAD his v1.4+ board, and this version drives A15/A16 and so
+	correctly uploads the .hex memory image to 'physical address' 0x00000.
+	When the 0.91 configuration was loaded, it once again ran code at
+	'physical address' 0x18000, which crashes unpredictably.
+
+	The fix was to modify the XSOC.sch design to tie XA16 to ground,
+	and modify the xsoc*.ucf files to apply pin LOCs (XA<15>=P28,
+	XA16=P16) so as to properly drive the v1.4+ board's 128 KB SRAM
+	address lines A15 and A16.
+
+	As a bonus, this now provides an almost full 64 KB of RAM
+	(0000-FEFF) on v1.4+ boards.  (Recall FFxx is the I/O control
+	register space).
+
+	Now that XA16=P16 is being driven, the new xsoc-*-14.bit MUST NOT
+	be run on pre-v1.4 XS40 boards, because they also drive P16 with
+	the output of the inverter U3C (see p.17 of XS40-manual-v1_3.pdf).
+	Therefore there will be yet another set of UCF files that drive
+	XA16=P? (v1.2, v1.3) or XA16=P16 (v1.4, v1.4+).  (On a v1.4
+	(not +) board, it should be benign to drive XA<15>=P28 and
+	XA16=P16 even though there these signals do not drive pins on
+	the 32 KB SRAM).
+
+	UCF File             Target
+	--------             ------
+	xsoc-05xl-13.ucf     XS40 v1.2 or v1.3,  4005XL
+	xsoc-10xl-13.ucf     XS40 v1.2 or v1.3,  4010XL
+	xsoc-05xl-14.ucf     XS40 v1.4 or v1.4+, 4005XL
+	xsoc-10xl-14.ucf     XS40 v1.4 or v1.4+, 4010XL
+
+	We also need new kinds of prebuild xsoc.bit files:
+	Bitstream            Target
+	--------             ------
+	xsoc-05xl-12.bit     XS40 v1.2,  4005XL
+	xsoc-10xl-12.bit     XS40 v1.2,  4010XL
+	xsoc-05xl-13.bit     XS40 v1.3,  4005XL
+	xsoc-10xl-13.bit     XS40 v1.3,  4010XL
+	xsoc-05xl-14.bit     XS40 v1.4 or v1.4+, 4005XL
+	xsoc-10xl-14.bit     XS40 v1.4 or v1.4+, 4010XL
+Closed:	04/04/00 jan@fpgacpu.org
+
+
+Issue:	14 wish xsoc XSOC/xr16 refloorplanned for XC4010XL
+Opened:	03/20/00 jan@fpgacpu.org
+	XSOC/xr16 is currently floorplanned for a 14x14 CLB XC4005XL.
+	When built on a XC4010XL, it retains the same floorplan, with the
+	result that the datapath is placed on rows 7-14.  In an '4010, it
+	would be better if the datapath were placed on rows 13-20.
+	There is no convenient way to do this using schematics, however.
+	Hopefully we can do better with the Verilog version.
+
+
+Issue:	15 defect lcc-xr16 some unsigned hex consts promoted to long
+Opened:	03/31/00 jan@fpgacpu.org
+	Repro: lcc-xr16 -S 15.c (and review 15.s)
+	Problem report:
+		From: Jamie R. Chinn (jamiechi-@fultonscrossing.com)
+		Sent: Friday, March 31, 2000 1:42 AM
+		To: fpga-cpu@egroups.com
+		Subject: [fpga-cpu] Constants in LCC-XR16 compiler
+		A constant such as 0x8000 is by default treated as a four byte long.
+		This creates lots of errors. (Such as zexl and leal not found.)
+		To work around this, explicitly cast the constant to unsigned.
+			(unsigned)0x8000   or    0x8000u
+		Shouldn't the default be the two byte int or unsigned int? (I believe
+		the int is defined as 16 bits for the XR16.)
+	Indeed this is an error.  The type of 0x8000 should be unsigned int
+	per C standard:
+		Section 3.1.3.2. Integer Constants
+		"The type of an integer constant is the first of the corresponding
+		list in which its value can be represented: ... unsuffixed octal or
+		hexadecimal: int, unsigned int, long int, unsigned long int ..."
+
+	While 0x8000 (32768) is not representable as an int, it is representable
+	as an unsigned int, but lcc mistakenly promotes it to long.
+
+Resolv:	03/31/00 fixed 0.93 jan@fpgacpu.org
+	Problem lay in function icon in src/lex.c.  Quote:
+		static Symbol icon(unsigned long n, int overflow, int base) {
+			...
+			} else if (overflow || n > longtype->u.sym->u.limits.max.i)
+				tval.type = unsignedlong;
+			else if (n > inttype->u.sym->u.limits.max.i)
+				tval.type = longtype;
+			else if (base != 10 && n > inttype->u.sym->u.limits.max.i)
+				tval.type = unsignedtype;
+			else
+				tval.type = inttype;
+			...
+	Fix was to change this to
+
+		static Symbol icon(unsigned long n, int overflow, int base) {
+			...
+			} else if (overflow || n > longtype->u.sym->u.limits.max.i)
+				tval.type = unsignedlong;
+
+		#if 1 /* 00/03/31 jan@fpgacpu.org XSOC issue #15 fix added */
+			else if (base != 10 &&
+					 n > inttype->u.sym->u.limits.max.i &&
+					 n <= unsignedtype->u.sym->u.limits.max.i)
+				tval.type = unsignedtype;
+		#endif
+			else if (n > inttype->u.sym->u.limits.max.i)
+				tval.type = longtype;
+		#if 0 /* 00/03/31 jan@fpgacpu.org XSOC issue #15 fix deleted */
+			else if (base != 10 && n > inttype->u.sym->u.limits.max.i)
+				tval.type = unsignedtype;
+		   }
+		#endif
+			else
+				tval.type = inttype;
+			...
+Closed:	04/04/00 jan@fpgacpu.org
+
+
+Issue:	16 defect doc xspecs.pdf: b<cond> a,-32768 broken
+Opened:	04/03/00 jan@fpgacpu.org
+	The instruction set specification uses comparisons with the negation
+	of the b operand to describe the behavior of all b<cond>s.  Example:
+		Format: blt label
+		...
+		Operation: pre
+		           if ((signed)a < (signed)-b)
+		               pc += 2*sign_ext(disp8) + 2;
+		...
+	The problem here is (signed)-b is undefined for b==-32768 (0x8000).
+
+
+Issue:	17 defect xr16iss b<cond> a,-32768 broken
+Opened:	04/03/00 jan@fpgacpu.org
+	The ISS works as documented in issue #16, which disagrees with the
+	Verilog model.
+
+
+Issue:	18 defect xr16asm cmpi reg,-32768 broken
+Opened:	04/03/00 jan@fpgacpu.org
+	The xr16 assembler turns cmpi reg,imm into addi r0,reg,-imm.
+	This is OK for cmpi/beq and cmpi/bne, but it doesn't work
+	for cmpi/b<other> if imm==-32768, because -imm==32768 is not
+	representable in 16-bit 2's complement.  It should use something like:
+
+		cmpi reg,imm => addi r0,reg,-imm  if imm != -32768
+
+		             => lea  r1,-32768    if imm == -32768
+		                cmp  reg,r1
+		             => imm  0x8000
+                        addi r1,r0,0
+		                and  r0,r0     ; nop
+		                sub  r0,reg,r1 
+
+Resolv:	04/03/00 fixed 0.93 jan@fpgacpu.org
+	Fixed as above.
+Closed:	04/04/00 jan@fpgacpu.org
+
+
+Issue:	19 defect xr16asm cmpi reg,0 broken
+Opened:	04/03/00 jan@fpgacpu.org
+	The xr16 assembler turns cmpi reg,0 into addi r0,reg,0.
+	This doesn't set carry-out properly.  Contrast
+		lea  r2,2  => addi r2,r0,2
+		cmpi r2,1     addi r0,r2,-1  ; sets carry-out
+		bltu label    bltu label     ; carry-out set, so branch cond is false
+	with
+		lea  r2,2  => addi r2,r0,2
+		cmpi r2,0     addi r0,r2,0   ; clears carry-out
+		bltu label    bltu label     ; carry-out clear, so cond is true, WRONG
+	Here the addi of 0 fails to set carry-out, whereas if we generated
+		lea  r2,2  => addi r2,r0,2
+		cmpi r2,0     sub  r0,r2,r0  ; => add 0002 + ~0000 + 1, sets carry-out
+		bltu label    bltu label     ; carry-out set, so cond is false, RIGHT
+	So it's a little tricky, but the fix is to map
+		cmpi reg,0 => sub r0,reg,r0
+Resolv:	04/03/00 fixed 0.93 jan@fpgacpu.org
+	Fixed as above.
+Closed:	04/04/00 jan@fpgacpu.org
+
+
+Issue:	20 defect xsoc problems building under Foundation 2.1i.
+Opened:	04/03/00 jan@fpgacpu.org
+	Reported by jamiechi@fultonscrossing.com (Jamie R. Chinn):
+	"Version 2.1i doesn't like the three 'unbonded' outputs
+	that were in the configuration file. I had to assign them to
+	specific pins."
+Resolv:	04/04/00 fixed 0.93 jan@fpgacpu.org
+	Fixed.  For the v1.2 and v1.3 boards, the UCF files
+	xsoc-05xl-13.ucf and xsoc-05xl-14.ucf now constrain these
+	unused outputs to device pins that drive 8031 I/Os:
+		NET XA<0>	LOC = P7; # P1.0 (unused)
+		NET XA<15>	LOC = P8; # P1.1 (unused)
+		NET XA16	LOC = P9; # P1.2 (unused)
+	For the v1.4 and v1.4+ boards, the UCF files
+	xsoc-05xl-14.ucf and xsoc-10xl-14.ucf now constrain these
+	unused outputs to device pins that drive 8031 I/Os:
+		NET XA<0>	LOC = P7; # P1.0 (unused)
+	This should eliminate all unbonded outputs, and hence the problem
+	F2.1i has with them.

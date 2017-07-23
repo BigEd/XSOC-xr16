@@ -1,0 +1,18 @@
+CONTRIB -- XSOC Project Third Party Contributions
+
+Copyright (C) 1999, 2000, Gray Research LLC.  All rights reserved.
+The contents of this file are subject to the XSOC License Agreement;
+you may not use this file except in compliance with this Agreement.
+See the LICENSE file.
+
+
+I gratefully ackowledge the following third party contributions to the
+XSOC project.
+	-- Jan Gray, President, Gray Research LLC.
+
+
+00/03/20 0.93 mbutts-@realizer.com (Mike Butts)
+	* Contributed Verilog simulator files
+	  xsocv\{sram32kx8.v, ram16x1s.v, xsoc_tb.v, hex2mem.pl}.
+	* Test ported xsocv to several Verilog simulator platforms.
+	

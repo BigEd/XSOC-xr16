@@ -1,0 +1,10 @@
+[general]
+$file=BUF4.sch
+short_comment=
+long_comment=4-bit buffer
+reference=U
+ref_visible=1
+bbox=200,80
+[ports]
+I=INPUT,L40,3,0
+O=OUTPUT,R40,3,0

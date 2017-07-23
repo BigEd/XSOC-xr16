@@ -1,0 +1,17 @@
+XSOC Demos README
+
+Copyright (C) 1999, 2000, Gray Research LLC.  All rights reserved.
+The contents of this file are subject to the XSOC License Agreement;
+you may not use this file except in compliance with this Agreement.
+See the LICENSE file.
+
+
+CONTENTS
+
+    fib.c           Fibonacci demo source
+    sim.s           simulator preamble assembly source
+    end.s           simulator epilog source
+    gr.c            Graphics demo source
+    glyphs.c        Glyphs (font) table source
+    makeglyphs.c    Build glyphs.c source
+    wond.s          wondrous(27) assembly source for Verilog simulation example

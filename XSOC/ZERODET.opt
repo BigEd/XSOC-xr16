@@ -1,0 +1,7 @@
+[general]
+bbox=160,80
+long_comment=16-bit zero detect
+$file=ZERODET.sch
+[ports]
+I=INPUT,L40,15,0
+Z=OUTPUT,R40

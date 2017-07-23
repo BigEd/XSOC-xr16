@@ -1,0 +1,15 @@
+XSOC Documentation README
+
+Copyright (C) 1999, 2000, Gray Research LLC.  All rights reserved.
+The contents of this file are subject to the XSOC License Agreement;
+you may not use this file except in compliance with this Agreement.
+See the LICENSE file.
+
+
+CONTENTS
+
+    started.pdf		Getting Started Guide
+    xspecs.pdf		Various xsoc/xr16 specifications
+    schematics.pdf	A Tour of the XSOC/xr16 Schematics
+    xsoc-talk.pdf	Slides of a talk on FPGA CPUs and XSOC/xr16
+	xr16man.pdf		xr16 assembler/simulator manual page

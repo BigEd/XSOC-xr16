@@ -1,0 +1,15 @@
+[general]
+$file=RNMUX4.sch
+short_comment=
+long_comment=
+reference=U
+ref_visible=1
+bbox=260,280
+[ports]
+RA=INPUT,L240,3,0
+RD=INPUT,L200,3,0
+RDX=INPUT,L160,3,0
+SELR15=INPUT,L40
+SELRD=INPUT,L80
+SELRARD=INPUT,L120
+RN=OUTPUT,R240,3,0

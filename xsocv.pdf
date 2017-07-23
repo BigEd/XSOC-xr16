@@ -1,0 +1,47 @@
+[project]
+name=xsocv
+netlist=xsocv
+contents=
+date=04/07/100
+time=06:30:10
+lib_order=1015
+version=3.1.4.05.99q
+Type=XILINX8
+top_level=VHDL
+[libraries]
+1015=
+[xilinx]
+libraries=unified
+[ext_sheets]
+xsocv.ucf= 
+[Top Doc]
+xsoc.v=21
+datapath.v=21
+ctrl.v=21
+memctrl.v=21
+ram16s.v=21
+vga.v=21
+xio.v=21
+xr16.v=21
+xram16.v=21
+[hdl_sheets]
+xsoc.v= 
+datapath.v= 
+ctrl.v= 
+memctrl.v= 
+ram16s.v= 
+vga.v= 
+xio.v= 
+xr16.v= 
+xram16.v= 
+[OPEN32]
+nMaxFile=10000
+lpstrFile=
+lpstrFilter=HDL (*.VHD;*.VER;*.VE;*.V)|*.vhd;*.ver;*.ve;*.v|Schematic (*.SCH)|*.sch|FSM (*.ASF)|*.asf|Xnf Sources (*.XNF)|*.xnf|Edif Sources (*.EDF;*.EDN;*.EDO)|*.edf;*.edn;*.edo|All Files (*.*)|*.*||
+lpstrInitialDir=D:\XSOC\XSOCV
+lpstrTitle=Add Document
+nFilterIndex=0
+Flags=530964
+HelpID=10380
+HelpFileName=D:\X\ACTIVE\EXE\PCM.HLP
+cmdLine=-h 438 -hp 264 -m PCM_OPEN_32_MESSAGE -f D:\X\ACTIVE\PROJECTS\current.pdf

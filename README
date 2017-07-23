@@ -1,0 +1,110 @@
+The XSOC Project Version Beta 0.93 README
+
+Copyright (C) 1999, 2000, Gray Research LLC.  All rights reserved.
+The contents of this file are subject to the XSOC License Agreement;
+you may not use this file except in compliance with this Agreement.
+See the LICENSE file.
+
+
+Dear intrepid student, educator, hobbyist, or researcher,
+
+Thank you for your interest in the XSOC Project.  The XSOC Project
+is an unsupported collection of experimental hardware and software
+designs and specifications, cited in the Circuit Cellar magazine
+series, "Building a RISC System in an FPGA", and providing an
+example for the noble purpose of teaching computer design.
+
+XSOC consists of the XSOC System-on-a-Chip design, including the
+xr16 RISC processor core, and an on-chip bus and peripherals.
+It is accompanied by a port of the lcc4.1 retargetable C compiler
+that targets xr16, and a simple xr16 assembler and simulator.
+
+Please be sure to carefully review the XSOC License Agreement
+(see the LICENSE file).
+
+Also be sure to visit http://www.fpgacpu.org/xsoc for the latest news
+and to check that you have the current version of the XSOC Project.
+This is version Beta 0.93.
+
+To begin, read the Getting Started Guide (doc\started.pdf).
+
+If you do try the XSOC Project, please let us know what you think
+of it, either by sending a message to fpga-cpu@egroups.com or
+by filling out the Survey and sending it to xsoc-survey@fpgacpu.org.
+
+I do hope you enjoy working with the XSOC Project and that it inspires
+you to pursue further hands-on study of computer design and FPGAs.
+
+Jan Gray
+President, Gray Research LLC
+
+
+----------
+CONTENTS
+
+The XSOC Project distribution consists of these files and directories.
+
+1. Documents
+    LICENSE: XSOC License Agreement
+    README: this file
+    FAQ: frequently asked questions about XSOC
+    contrib: list of third party contributions
+    survey: XSOC User Survey 1.0
+    doc\started.pdf: Getting Started Guide
+    doc\xspecs.pdf: Various xsoc/xr16 specifications
+    doc\schematics.pdf: A Tour of the XSOC/xr16 Schematics
+    doc\xsoc-talk.pdf: Slides of a talk on FPGA CPUs and XSOC/xr16
+
+2. Project Issues
+    issues\issues: issues database
+    issues\issues-list: issues list summary
+    issues\issues-howto: how to report new issues
+
+3. Tools
+    lcc-xr16\: C compiler for xr16
+    src\xr16\: xr16 assembler and simulator
+    src\lfsr\: linear feedback shift register counter generator
+
+4. Schematics Design
+    xsoc.pdf(*), xsoc\: XSOC/xr16 Foundation 1.5 XSOC 1.0 design
+
+5. Verilog Design
+    xsocv.pdf(*), xsocv\: XSOC/xr16 1.0 Verilog design
+
+6. Configuration Bitstreams
+    Schematics version
+        xsoc\xsoc-05xl-1.2-093.bit:    12   MHz XSOC 1.0 for XS40-005XL v1.2
+        xsoc\xsoc-05xl-1.3-093.bit:    12.5 MHz XSOC 1.0 for XS40-005XL v1.3
+        xsoc\xsoc-05xl-1.4-093.bit:    12.5 MHz XSOC 1.0 for XS40-005XL/+ v1.4
+        xsoc\xsoc-10xl-1.2-093.bit:    12   MHz XSOC 1.0 for XS40-010XL v1.2
+        xsoc\xsoc-10xl-1.3-093.bit:    12.5 MHz XSOC 1.0 for XS40-010XL v1.3
+        xsoc\xsoc-10xl-1.4-093.bit:    12.5 MHz XSOC 1.0 for XS40-010XL/+ v1.4
+    Verilog version
+        xsocv\xsocv-05xl-1.3-093.bit:  12.5 MHz XSOC 1.0 for XS40-005XL v1.3
+        xsocv\xsocv-05xl-1.4-093.bit:  12.5 MHz XSOC 1.0 for XS40-005XL/+ v1.4
+        xsocv\xsocv-10xl-1.3-093.bit:  12.5 MHz XSOC 1.0 for XS40-010XL v1.3
+        xsocv\xsocv-10xl-1.4-093.bit:  12.5 MHz XSOC 1.0 for XS40-010XL/+ v1.4
+
+7. Demos
+    demos\fib.c: Fibonacci demo source
+    demos\sim.s: simulator preamble assembly source
+    demos\end.s: simulator epilog source
+    demos\gr.c: Graphics demo source
+    demos\glyphs.c: Glyphs (font) table source
+    demos\makeglyphs.c: Build glyphs.c source
+
+8. Tests
+    tests\: xr16 instruction set test suite
+
+
+(*) not an Acrobat PDF document.  Unfortunately Foundation projects
+are also given the .pdf filename extension.
+
+
+----------
+NOTES
+
+1.  Through the XSOC files, most email addresses have been camoflaged
+    (foo@bar.com -> foo-@bar.com or foo @bar.com) to help prevent
+    spammers from scrubbing email addresses from the project or the
+    web site.

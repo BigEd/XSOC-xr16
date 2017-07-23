@@ -1,0 +1,12 @@
+[general]
+$def=SCHEMATIC
+$file=LFSR10.sch
+short_comment=
+long_comment=
+reference=U
+ref_visible=1
+[ports]
+RESET=INPUT,L10,,
+CE=INPUT,L10,,
+CLK=INPUT,L10,,
+O=OUTPUT,L10,9,0

@@ -1,0 +1,10 @@
+[general]
+bbox=200,240
+long_comment=8-bit input register
+$file=XIN8.sch
+[ports]
+I=INPUT,L200,7,0
+CTRL=INPUT,L160,15,0
+D=OUTPUT,L120,7,0
+SEL=INPUT,L80
+CLK=INPUT,L40

@@ -1,0 +1,176 @@
+XSOC User Survey 0.93
+Copyright (C) 2000, Gray Research LLC.  All rights reserved.
+
+Please help us improve the XSOC Project, by taking a few minutes to
+answer as many of the following questions as you wish, and then
+emailing your responses to xsoc-survey@fpgacpu.org.
+
+Aggregated numeric answers and select written answers may be posted to
+fpga-cpu@egroups.com, so please don't send anything sensitive.
+
+If you are currently having problems, please do not use this survey to
+seek assistance. Rather, see the Help! file.
+
+Thank you for your help.
+
+--------------------------------------------------------------------------
+
+Please rate your XSOC experiences on a scale of 0-5:
+
+   [0] - not applicable, not yet
+   [1] - no, hard, didn't work, got stuck, confusing, frustrating
+   [2] -
+   [3] - perhaps, OK, acceptable, could be better
+   [4]
+   [5] - yes, easy, successful, works great, clear, pleasant
+   [ ] - ignored question
+   [@] - written answer, for example, [instructor]
+
+   Please answer yes/no questions with either a [1] or a [5].
+   Please don't hesitate to expand upon your [numeric] response
+   with additional written comments.
+
+
+1. Download/Install
+
+<1.1>  [ ] I downloaded the XSOC materials and read the LICENSE.
+<1.2>  [ ] I read the README.TXT.
+<1.3>  [ ] I read the Getting Started guide.
+<1.4>  [ ] I downloaded the lcc41.exe InstallShield distribution.
+<1.5>  [ ] I installed the lcc41.exe InstallSheild distribution.
+<1.6>  [ ] I installed the lcc-xr16 program overlay.
+<1.7>  I had some problems:
+       [@]
+
+
+2. Compiler/Assembler
+
+<2.1>  [ ] I compiled the fib.c demo to fib.s with lcc-xr16.
+<2.2>  [ ] I assembled the fib.s demo.
+<2.3>  [ ] I simulated the fib.s demo.
+<2.4>  [ ] I compiled some other C program with lcc-xr16.
+<2.5>  I had some problems:
+       [@]
+       (and/or file a bug report form)
+
+
+3. FPGA Demo
+
+<3.1>  [ ] I compiled the graphics demo gr.c with lcc-xr16.
+<3.2>  [ ] I reviewed the gr.lst listing file.
+<3.3>  [ ] It was clear which .bit file to use.
+<3.4>  [ ] I already had access to a suitable XS40 board.
+<3.5>  [ ] I got an XS40 board, just to try XSOC.
+<3.5>  [@] It is a ... board revision (e.g. XS40-010XL v1.4+)
+<3.6>  [ ] I successfully ran XSTEST or GXSTEST test first.
+<3.7>  [ ] (XS40 v1.3 or later) I set my XS40 clock to 12.5 MHz (divide by 8).
+<3.8>  [ ] I loaded gr.hex and xsoc-*.bit and saw the LEDs pulsing dimly.
+<3.9>  [ ] I loaded gr.hex and xsoc-*.bit, attached a monitor, and it worked.
+<3.10> I had some problems:
+       [@]
+
+
+4. Rebuilding lcc-xr16 from sources
+
+<4.1>  [ ] I installed the lcc4.1 sources.
+<4.3>  [ ] I installed the lcc-xr16 sources overlay.
+<4.4>  [ ] I built lcc-xr16.
+<4.5>  [ ] I installed the xr16 assembler/simulator sources.
+<4.6>  [ ] I built xr16.
+<4.7>  [ ] I installed them in the %LCCDIR% directory.
+<4.8>  I had some problems:
+       [@]
+
+
+5. Rebuilding the FPGA -- Schematics version
+
+<5.1>  [ ] I already had access to Xilinx Foundation or Student Ed.
+<5.2>  [ ] I got Xilinx Foundation or Student Ed., just to try XSOC.
+<5.3>  [@] It is ... version ... . (e.g. XSE 1.5, Foundation 2.1i, etc.)
+<5.4>  [ ] It was clear which .ucf file to copy to xsoc.ucf.
+<5.5>  [ ] I started the Foundation Project Manager and loaded XSOC.
+<5.6>  [ ] I opened the Schematic Editor on xsoc.sch, looked around, and quit.
+<5.7>  [ ] I clicked Implementation, set options, and built xsoc.bit.
+<5.8>  [@] On my PC, the build took about ... minutes.
+<5.9>  [ ] I ran the graphics demo with the new xsoc.bit and it worked.
+<5.10> I had some problems:
+       [@]
+
+
+6. Rebuilding the FPGA -- Verilog version
+
+<6.1>  [ ] I already had access to Xilinx Foundation Express or Student Ed.
+<6.2>  [ ] I got Xilinx Foundation Express or Student Ed., just to try XSOC
+<6.3>  [@] It is ... version ... . (e.g. XSE 1.5, Foundation 2.1i, etc.)
+<6.4>  [ ] It was clear which .ucf file to copy to xsoc.ucf.
+<6.5>  [ ] I started the Foundation Project Manager and loaded XSOCV.
+<6.6>  [ ] I opened the HDL Editor on xsoc.v, looked around, and quit.
+<6.7>  [ ] I ran Synthesis, Implementation, and built xsocv.bit.
+<6.8>  [@] On my PC, the build took about ... minutes.
+<6.9>  [ ] I ran the graphics demo with the new xsocv.bit and it worked.
+<6.10> I had some problems:
+       [@]
+
+7. The Next Level
+<7.1>  [ ] I modified the demos.
+<7.2>  [ ] I ran new C programs on the system.
+<7.3>  [ ] I modified the compiler.
+<7.4>  [ ] I modified the assembler.
+<7.5>  [ ] I modified some aspect of the XSOC design.
+<7.6>  [ ] I added a new peripheral.
+<7.7>  [ ] I modified the xr16 CPU.
+<7.8>  I had some problems:
+       [@]
+
+
+8. Documentation
+
+<8.1>  [ ] I like short documentation in text files.
+<8.2>  [ ] I like short documentation in HTML files and directories.
+<8.3>  [ ] I like short documentation in Adobe Acrobat format.
+<8.4>  [ ] I like short documentation in Microsoft Word format.
+<8.5>  [ ] I like long documentation in text files.
+<8.6>  [ ] I like long documentation in HTML files and directories.
+<8.7>  [ ] I like long documentation in Adobe Acrobat format.
+<8.8>  [ ] I like long documentation in Microsoft Word format.
+<8.9>  [ ] The README was helpful.
+<8.10> [ ] The README was clear, correct, complete.
+<8.11> [ ] The Getting Started Guide was helpful.
+<8.12> [ ] The Getting Started Guide was clear, correct, complete.
+<8.13> [ ] The Tour of the XSOC/xr16 Schematics was helpful.
+<8.14> [ ] The Tour of the XSOC/xr16 Schematics was clear, correct, complete.
+<8.15> [ ] The XSOC/xr16 Specifications document was helpful.
+<8.16> [ ] The XSOC/xr16 Specifications document was clear, correct, complete.
+<8.17> I had some problems:
+       [@]
+<8.18> Documentation suggestions:
+       [@]
+
+
+9. Demographics
+
+<9.1>  [@] I am a/an { instructor, student, hobbyist, researcher, ... }.
+<9.2>  [ ] I know digital design.
+<9.3>  [ ] I have designed with FPGAs before.
+<9.4>  [ ] I designed and built the Vanden Bout text exercises first.
+<9.5>  [ ] I wish I had.
+
+Optional Written Comments:
+(Pick some topics or make up your own.)
+
+I was interested in the XSOC Project because:
+After initial enthusiasm, I became disillusioned with XSOC because:
+I can't/won't use XSOC because:
+I am giving up / gave up on XSOC because:
+The best thing about the XSOC Project is:
+The worst thing about the XSOC Project is:
+I got stuck when I tried ...:
+The one thing missing from the project/compiler/assembler/xsoc/xr16 is:
+If you ever add a test suite to XSOC, please test (and how):
+Please host XSOC on ... .
+Please target XSOC to ... .
+Oh yeah, one more thing:
+My top three wish list features are:
+
+Thank you again for your assistance.
+

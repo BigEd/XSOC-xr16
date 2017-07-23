@@ -1,0 +1,148 @@
+coding -- Verilog XSOC/xr16 Coding Standard 1.0
+
+Copyright (C) 1999, 2000, Gray Research LLC.  All rights reserved.
+The contents of this file are subject to the XSOC License Agreement;
+you may not use this file except in compliance with this Agreement.
+See the LICENSE file.
+
+
+Coding Standard, adapted from Chapter 5, "RTL Coding Guidelines",
+of the Reuse Methodology Manual [1].
+
+1.  Use lowercase names for all signal names, variable names, and port names.
+
+2.  Use uppercase for constants.
+
+3.  Clock is named clk.
+
+4.  The global asynchronous reset is named rst.
+
+5.  All multibit buses are numbered [n:0]
+
+6.  Naming conventions
+
+    Suffix  Meaning
+    /Prefix
+    ------  -------
+    *_n     Active low signal
+    *_nxt   Signal input to register with same name
+    *_ce    Flip-flop clock enable
+    *_t     Active low 3-state buffer output enable
+    if_     Instruction Fetch stage signal
+    dc_     Decode stage signal
+    ex_     Execute stage signal
+
+    These differ slightly from the XSOC naming conventions as described in the
+    second article in the XSOC Circuit Cellar article series:
+
+    * N<sig>: not signal (signal inverted)
+    * <sig>N: signal in "next cycle" -- input to flip-flop <sig>
+    * <sig>CE: flip-flop clock enable
+    * <sig>T: active low 3-state buffer output enable
+    * DC<sig>: DC stage signal
+    * EX<sig>: EX stage signal
+
+    See Appendix I below for the map from XSOC schematic names to
+    Verilog names.
+
+7.  Keep lines to 79 columns or less.
+
+8.  Port ordering: first inputs, then outputs.
+    For inputs: clocks, resets, enables, other control, then address and data;
+    For outputs: clocks, resets, enables, other control, then address and data.
+
+    Exception: The first five ports of every XSOC bus peripheral are always
+        .clk(clk), .rst(rst), .ctrl(ctrl), .sel(sel[]), .d(d),
+
+9.  Port maps: always use port maps to establish a named association from
+    port name to port signal.
+
+10. Always use nonblocking assignments (<=) within always @(posedge clk)
+    blocks.
+
+11. Tabs=4.  (In vi, set ts=4 sw=4.)
+    Use tabs only to the column that the code block is indented,
+    and never after the first non-tab character (use spaces instead).
+    That way the result looks OK even if printed with tabs=8.
+    Example:
+        a = 1;             /* comment */
+                           /* more comments */
+        foo(a, ...,
+            b);
+    is entered as
+    tab>a = 1;____________/* comment */
+    tab>__________________/* more comments */
+    tab>foo(a, ...,
+    tab>____b);
+
+n.  When in Rome, do as the Romans do.
+
+
+Reference
+
+[1] Keating, Michael, and Pierre Bricaud, "Reuse Methodology Manual
+    for System-on-a-Chip Designs", Kluwer Academic Publishers, 1998.
+
+
+-----
+Appendix I  XSOC schematics -> XSOC Verilog signal renaming
+    
+    Schematic   Verilog
+    ---------   -------
+    a           addr
+    ace         mem_ce
+    an          addr_nxt
+    bce15_4     b15_4_ce
+    dbusn       dbus_nxt
+    dcannul     dc_annul
+    dcint       dc_int
+    dman        dma_nxt
+    dmap        dma_pend
+    dmareq      dma_req
+    exan        exannul_nxt
+    exannul     ex_annul
+    excall      ex_call
+    exfn        ex_fn
+    exir        ex_ir
+    exjump      ex_jump
+    exlbsb      ex_lbsb
+    exldst      ex_ldst
+    exop        ex_op
+    exrd        ex_rd
+    exresults   ex_results
+    ifint       if_int
+    intp        int_pend
+    ireq        int_req
+    lce         ld_ce
+    lcen        ld_ce_nxt
+    ldt         ld_t
+    ldtn        ld_t_nxt
+    logict      logic_t
+    lsn         ldst_nxt
+    lsp         ldst_pend
+    lxdt        lxd_t
+    nhsync      hsync_n
+    nvsync      vsync_n
+    pcce        pc_ce
+    pce         pipe_ce
+    ramnce      ram_ce_n
+    ramnoe      ram_oe_n
+    ramnwe      ram_we_n
+    readn       read_nxt
+    retadt      ret_t
+    retce       ret_ce
+    rfwe        rf_we
+    slt         shl_t
+    srt         shr_t
+    sumt        sum_t
+    uce         ud_ce
+    ucen        ud_ce_nxt
+    udldt       udlt_t
+    udt         ud_t
+    udtn        ud_t_nxt
+    uxdt        uxd_t
+    uxdt        uxd_t
+    wordn       word_nxt
+    xdoutt      xdout_t
+    zerop       zero_pend
+    zxt         zeroext_t

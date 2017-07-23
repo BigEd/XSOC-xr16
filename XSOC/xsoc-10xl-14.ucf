@@ -1,0 +1,94 @@
+# xsoc-10xl-14.ucf -- XSOC constraints for XS40-010XL boards v1.4 and v1.4+
+#
+# Copyright (C) 1999, 2000, Gray Research LLC.  All rights reserved.
+# The contents of this file are subject to the XSOC License Agreement;
+# you may not use this file except in compliance with this Agreement.
+# See the LICENSE file.
+#
+
+net CLK period=45;
+timegrp ramctl=pads(XA*):PADS(RAMN*);
+#timegrp rgb=pads(R1):PADS(R0):PADS(G1):PADS(G0):PADS(B1):PADS(B0);
+timegrp dout=ffs(P/D/DOUT*);
+timegrp pffs=ffs(P/*);
+net UDLDT tpthru = doutt;
+net LDT tpthru = doutt;
+net UDT tpthru = doutt;
+timespec ts_dout_pads=from:dout:to:pads:20;
+timespec ts_ffs_ramctl=from:ffs:to:ramctl:18;
+#timespec ts_ffs_rgb=from:ffs:to:rgb:20;
+timespec ts_ign_dout_pffs=from:dout:to:pffs:tig;
+timespec ts_ign_doutt=from:ffs:thru:doutt:to:pffs:tig;
+
+NET CLKIN	LOC = P13;
+NET RESET8031	LOC = P36;
+NET RAMNCE	LOC = P65;
+NET RAMNOE	LOC = P61;
+NET RAMNWE	LOC = P62;
+NET XD<0>	LOC = P41;
+NET XD<1>	LOC = P40;
+NET XD<2>	LOC = P39;
+NET XD<3>	LOC = P38;
+NET XD<4>	LOC = P35;
+NET XD<5>	LOC = P81;
+NET XD<6>	LOC = P80;
+NET XD<7>	LOC = P10;
+
+NET XD<0>	FAST;
+NET XD<1>	FAST;
+NET XD<2>	FAST;
+NET XD<3>	FAST;
+NET XD<4>	FAST;
+NET XD<5>	FAST;
+NET XD<6>	FAST;
+NET XD<7>	FAST;
+NET XA_0	FAST;
+NET RAMNWE	FAST;
+NET RAMNOE	FAST;
+#NET R1		FAST;
+#NET R0		FAST;
+#NET G1		FAST;
+#NET G0		FAST;
+#NET B1		FAST;
+#NET B0		FAST;
+
+NET XA_0	LOC = P3;
+NET XA<0>	LOC = P7; # P1.0 (unused)
+NET XA<1>	LOC = P4;
+NET XA<2>	LOC = P5;
+NET XA<3>	LOC = P78;
+NET XA<4>	LOC = P79;
+NET XA<5>	LOC = P82;
+NET XA<6>	LOC = P83;
+NET XA<7>	LOC = P84;
+NET XA<8>	LOC = P59;
+NET XA<9>	LOC = P57;
+NET XA<10>	LOC = P51;
+NET XA<11>	LOC = P56;
+NET XA<12>	LOC = P50;
+NET XA<13>	LOC = P58;
+NET XA<14>	LOC = P60;
+NET XA<15>	LOC = P28; # 8031 P2.7, N/C to RAM (XS40), A15 (XS40+)
+NET XA16	LOC = P16; # N/C to RAM (XS40), A16 (XS40+)
+NET PAR_D0	LOC = P44;
+NET PAR_D1	LOC = P45;
+NET PAR_D2	LOC = P46;
+NET PAR_D3	LOC = P47;
+NET PAR_D4	LOC = P48;
+NET PAR_D5	LOC = P49;
+NET PAR_S3	LOC = P70;
+NET PAR_S4	LOC = P77;
+NET PAR_S5	LOC = P66;
+NET PAR_S6	LOC = P69;
+//NET PAR_S7	LOC = P75; // TDO
+//NET PAR_D6	LOC = P32; // M0
+//NET PAR_D7	LOC = P34; // M2
+
+NET NHSYNC      LOC = P19;
+NET NVSYNC      LOC = P67;
+NET R1          LOC = P18;
+NET R0          LOC = P23;
+NET G1          LOC = P20;
+NET G0          LOC = P24;
+NET B1          LOC = P26;
+NET B0          LOC = P25;

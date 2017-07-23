@@ -1,0 +1,15 @@
+[general]
+$file=TRUTH.sch
+short_comment=
+long_comment=Evalutate ZNCV for COND truth
+reference=U
+ref_visible=1
+symbol_overwritten=1
+bbox=260,240
+[ports]
+COND=INPUT,L40,3,0
+Z=INPUT,L200
+N=INPUT,L160
+C=INPUT,L120
+V=INPUT,L80
+TRUE=OUTPUT,R200

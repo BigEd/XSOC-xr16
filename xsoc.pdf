@@ -1,0 +1,102 @@
+[project]
+name=xsoc
+netlist=xsoc
+contents=xsoc
+date=02/23/100
+time=10:44:48
+version=3.1.4.05.99q
+generics=MAX
+Type=XILINX8
+top_level=schematic
+library_net=ON
+sim_mode=FUNC
+lib_order=1011 133 155
+[libraries]
+1011= 
+133=d:\x\active\syslib\simprims
+155=d:\x\active\syslib\xc4000x
+[xilinx]
+libraries=unified
+family=2
+xact8=On
+xfam=XC4000XL
+[device]
+xilinx=4005XLPC84-3
+part=4005XLPC84-3
+[ext_sheets]
+xsoc.ucf= 
+[sheets]
+Xsoc= 
+[Schematic]
+Table01=Project
+Table02=Sheet
+Table03=Date
+[sc_config]
+Firm Name=Copyright (C) 2000, Gray Research LLC.
+Table Data 1=This work and its use subject to XSOC
+Table Data 2=License Agreement. See LICENSE file.
+Table Data 3=
+[netlist]
+external=FALSE
+[Log]
+exp_EDIF.log=Export netlist to EDIF 200
+[implement_HDL]
+family=2
+xfam=XC4000XL
+part=4005XLPC84-3
+xilinx=4005XLPC84-3
+[OPEN32]
+nMaxFile=255
+lpstrFile=IMM16.SCH
+lpstrFilter=Schematic (*.SCH)|*.sch||
+lpstrInitialDir=D:\USR\JAN\EE\XSOC2000\
+lpstrTitle=Save As
+nFilterIndex=1
+Flags=6
+cmdLine=-h 1082 -hp 1124 -m PCM_OPEN_32_MESSAGE -f D:\X\ACTIVE\PROJECTS\current.pdf -s
+[timings]
+xsoc=
+[sim_config]
+Lower Bound=2048
+Upper Bound=2048
+B0 Period=50
+Transport Delay=On
+Enable Global Netlist Analysis=On
+Forced State=Default
+Output Waveform=Overwrite
+Global Reset=On
+Keep Comments=Off
+Execute Preset=Off
+Models Stabilization=On
+Pulse Global Reset Net Enabled=On
+Pulse Global Reset Net=1000
+[APP_95]
+lid=0
+oid=0
+source=D:\XSOC\XSOC\XSOC.SCH
+[sc_desk]
+desk00=D:\XSOC\XSOC\XSOC.SCH, 0, 0, 800, 478, 1
+[FILE7]
+XRAM16X16=XRAM16X16.sch
+XOUT4=XOUT4.sch
+XIN8=XIN8.sch
+VGA_12_5_MHZ=VGA_12_5_MHZ.sch
+BUF16=BUF16.sch
+IRMUX=IRMUX.sch
+FD4PE=FD4PE.sch
+M2_16Z=M2_16Z.sch
+FD16E=FD16E.sch
+FD12E4E=FD12E4E.sch
+M2_16=M2_16.sch
+LOGIC16=LOGIC16.sch
+RAM16X16S=RAM16X16S.sch
+ZERODET=ZERODET.sch
+M2_16K=M2_16K.sch
+M2_4=M2_4.sch
+M2_1F=M2_1F.sch
+REGFILE2=REGFILE2.sch
+M2_1H=M2_1H.sch
+scan_time=955052289
+[implement_XIE]
+version=05xl14
+revision=rev1

@@ -1,0 +1,9 @@
+[general]
+bbox=240,160
+long_comment=16-bit logic unit, floorplanned 8Rx1C, FMAP
+$file=LOGIC16.sch
+[ports]
+A=INPUT,L120,15,0
+B=INPUT,L80,15,0
+OP=INPUT,L40,1,0
+O=OUTPUT,R120,15,0

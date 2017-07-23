@@ -1,0 +1,9 @@
+[general]
+bbox=200,160
+long_comment=4-bit 2-to-1 multiplexor, floorplanned 2Rx1C FMAP
+$file=M2_4.sch
+[ports]
+A=INPUT,L120,3,0
+B=INPUT,L80,3,0
+SEL=INPUT,L40
+O=OUTPUT,R120,3,0

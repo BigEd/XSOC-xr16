@@ -1,0 +1,9 @@
+[general]
+bbox=160,160
+long_comment=2-to-1 multiplexor, fllorplanned 1Rx1C HMAP
+$file=M2_1H.sch
+[ports]
+A=INPUT,L120
+B=INPUT,L80
+O=OUTPUT,R120
+SEL=INPUT,L40

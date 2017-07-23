@@ -1,0 +1,40 @@
+Verilog XSOC/xr16 README
+
+Copyright (C) 1999, 2000, Gray Research LLC.  All rights reserved.
+The contents of this file are subject to the XSOC License Agreement;
+you may not use this file except in compliance with this Agreement.
+See the LICENSE file.
+
+
+CONTENTS
+    coding      Verilog coding and naming conventions
+    xsoc.prj    Veriwell simulator project
+
+    xsoc.v      XSOC System-on-a-Chip synthesizable Verilog model
+    memctrl.v   XSOC memory/on-chip bus controller synthesizable Verilog model
+    xio.v       XSOC external I/O synthesizable Verilog models
+    xram16.v    XSOC on-chip RAM synthesizable Verilog model
+    vga.v       XSOC bilevel VGA controller synthesizable Verilog model
+
+    xr16.v      xr16 pipelined RISC processor synthesizable Verilog model
+    ctrl.v      xr16 control unit synthesizable Verilog model
+    datapath.v  xr16 datapath synthesizable Verilog model
+    ram16s.v    RAM block synthesizable Verilog models
+
+    xsoc_tb.v   XSOC test bench (simulation only)
+    sram32x8.v  external async 32Kx8 SRAM Verilog model (simulation only)
+    ram16x1s.v  16x1 sync SRAM primitive Verilog model (simulation only)
+
+    sram32kx8.mem   copy of wond.mem
+    wond.mem    built from wond.hex from ../demos/wond.s
+    xr16.mem    xr16 test suite, built from ../tests/xr16/xr16.s
+
+    xsocv-05xl-13.ucf   contraints file for XS40-005XL v1.3
+    xsocv-05xl-14.ucf   contraints file for XS40-005XL v1.4
+    xsocv-10xl-13.ucf   contraints file for XS40-010XL v1.3
+    xsocv-10xl-14.ucf   contraints file for XS40-010XL v1.4
+
+    xsocv-05xl-13-093.bit   config bitstream for XS40-005XL v1.3, v0.93
+    xsocv-05xl-14-093.bit   config bitstream for XS40-005XL v1.4, v0.93
+    xsocv-10xl-13-093.bit   config bitstream for XS40-010XL v1.3, v0.93
+    xsocv-10xl-14-093.bit   config bitstream for XS40-010XL v1.4, v0.93

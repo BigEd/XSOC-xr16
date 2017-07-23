@@ -1,0 +1,19 @@
+[general]
+$file=RNMUX1.sch
+short_comment=
+long_comment=1-bit RN mux, floorplanned 1Rx1C
+reference=U
+ref_visible=1
+symbol_overwritten=1
+bbox=240,320
+[ports]
+RA=INPUT,L280
+RD=INPUT,L240
+SELRD=INPUT,L200
+EXRD=INPUT,L120
+SELR15=INPUT,L80
+SELSRC=INPUT,L40
+RN=OUTPUT,R280
+RSRC=OUTPUT,R160
+RDST=OUTPUT,R120
+SELR0=INPUT,L160

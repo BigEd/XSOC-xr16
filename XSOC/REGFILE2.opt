@@ -1,0 +1,12 @@
+[general]
+bbox=200,240
+long_comment=16x2-bit falling edge registered register file, floorplanned 1Rx1C FMAP+DFF
+$file=REGFILE2.sch
+[ports]
+A=INPUT,L120,3,0
+D1=INPUT,L200
+D0=INPUT,L160
+Q1=OUTPUT,R200
+Q0=OUTPUT,R160
+WE=INPUT,L80
+CLK=INPUT,L40

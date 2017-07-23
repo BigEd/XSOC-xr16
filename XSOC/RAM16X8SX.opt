@@ -1,0 +1,10 @@
+[general]
+bbox=240,200
+long_comment=16X8 RAMS, floorplanned 4Rx1C
+$file=RAM16X8SX.sch
+[ports]
+A=INPUT,L120,3,0
+D=INPUT,L160,7,0
+WE=INPUT,L80
+WCLK=INPUT,L40
+O=OUTPUT,R160,7,0

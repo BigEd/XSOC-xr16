@@ -1,0 +1,8 @@
+[general]
+bbox=200,120
+long_comment=
+$file=EQ10.sch
+[ports]
+A=INPUT,L80,9,0
+B=INPUT,L40,9,0
+EQ=OUTPUT,R80

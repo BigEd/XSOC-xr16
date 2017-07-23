@@ -1,0 +1,49 @@
+README -- XSOC Project lcc-xr16 README
+
+Copyright (C) 1999, 2000, Gray Research LLC.  All rights reserved.
+The contents of this file are subject to the XSOC License Agreement;
+you may not use this file except in compliance with this Agreement.
+See the LICENSE file.
+
+
+The C compiler for the XSOC Project is lcc-xr16, a port of lcc4.1 that
+targets xr16.
+
+Lcc4.1 is the retargetable C compiler written by Christopher W. Fraser
+and David R. Hanson, and described in their book
+
+    A Regargetable C Compiler: Design and Implementation,
+    Benjamin/Cummings, Redwood City, CA, 1995.
+
+Lcc is available free of charge, see
+http://www.cs.princeton.edu/software/lcc.
+
+The XSOC License Agreement does not apply to the original lcc4.1
+distribution.  The lcc distribution bears its own copyright and license,
+a copy of which is provided in the file CPYRIGHT.
+
+The XSOC License Agreement does apply to the lcc-xr16 changes made to
+the lcc4.1, described below.
+
+See the XSOC Project Getting Started Guide for instructions on how to
+install lcc-xr16, and for instructions on how to report problems.
+
+Please report lcc-xr16 problems to us, not to the lcc4.1 authors.
+See issues\issues-howto for directions on reporting issues.
+
+The directory src-mods contains four files derived from the lcc4.1
+distribution:
+
+1.  makefile.xr16, derived from lcc4.1's makefile.nt (added rules for
+    the targets lcc-xr16.exe and rcc-xr16.exe, and for the XR16 machine
+    description xr16.md).
+
+2.  src\bind.c, derived from lcc4.1's src\bind.c (added the xr16
+    target interface);
+
+3.  src\xr16.md, derived from lcc4.1's src\mips.md;
+
+4.  etc\xr16-win32.c, derived from lcc4.1's etc\win32.c.
+
+It also contains a new directory, libxr16, providing a minimal
+xr16 runtime library.

@@ -1,0 +1,7 @@
+[general]
+bbox=220,80
+long_comment=16-bit buffer
+$file=BUF16.sch
+[ports]
+I=INPUT,L40,15,0
+O=OUTPUT,R40,15,0

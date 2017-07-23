@@ -1,0 +1,9 @@
+[general]
+bbox=220,160
+long_comment=4-bit logic unit, floorplanned 2Rx1C FMAP
+$file=LOGIC4.sch
+[ports]
+A=INPUT,L120,3,0
+B=INPUT,L80,3,0
+OP=INPUT,L40,1,0
+O=OUTPUT,R120,3,0

@@ -1,0 +1,10 @@
+[general]
+bbox=240,200
+long_comment=
+$file=RAM16X16S.sch
+[ports]
+A=INPUT,L120,3,0
+D=INPUT,L160,15,0
+WE=INPUT,L80
+WCLK=INPUT,L40
+O=OUTPUT,R160,15,0

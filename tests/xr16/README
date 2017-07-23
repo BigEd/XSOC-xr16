@@ -1,0 +1,18 @@
+XSOC Project xr16 Test Suite README
+
+Copyright (C) 1999, 2000, Gray Research LLC.  All rights reserved.
+The contents of this file are subject to the XSOC License Agreement;
+you may not use this file except in compliance with this Agreement.
+See the LICENSE file.
+
+
+CONTENTS
+
+    README      this file
+    xr16.s      xr16 instruction set test suite
+    makefile    Builds xr16.* below from xr16.s
+
+    xr16.lst    xr16.s assembler listing file
+    xr16.sim    xr16.s run in the xr16 instruction set simulator
+    xr16.hex    xr16.s Intel (XSLOAD) hex image
+    xr16.mem    xr16.s Verilog hex image

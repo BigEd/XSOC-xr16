@@ -1,0 +1,13 @@
+[general]
+$file=IMM16.sch
+short_comment=
+long_comment=16-bit immediate operand mux, floorplanned 8Rx1C, FMAPs
+reference=U
+ref_visible=1
+bbox=240,200
+[ports]
+B=INPUT,L160,15,0
+IR=INPUT,L120,15,0
+IMM12=INPUT,L80
+IMM4=INPUT,L40
+O=OUTPUT,R160,15,0

@@ -1,0 +1,12 @@
+[general]
+$file=FD8E.sch
+short_comment=
+long_comment=8-bit register w/ CE, floorplanned 4Rx1C FD
+reference=U
+ref_visible=1
+bbox=240,160
+[ports]
+D=INPUT,L120,7,0
+Q=OUTPUT,R120,7,0
+CLK=INPUT,L40
+CE=INPUT,L80

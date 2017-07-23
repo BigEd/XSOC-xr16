@@ -1,0 +1,13 @@
+[general]
+$file=M2_4K.sch
+short_comment=
+long_comment=4-bit 2-1 mux w/ force constant 0000/1111, floorplanned 2Rx1C FMAP
+reference=U
+ref_visible=1
+bbox=200,200
+[ports]
+A=INPUT,L160,3,0
+B=INPUT,L120,3,0
+SEL=INPUT,L80
+K=INPUT,L40
+O=OUTPUT,R160,3,0

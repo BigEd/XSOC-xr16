@@ -1,0 +1,17 @@
+[general]
+$file=XR16.sch
+short_comment=
+long_comment=
+reference=U
+ref_visible=1
+bbox=300,320
+[ports]
+CLK=INPUT,L40
+ADCE=OUTPUT,R240
+DOUT=OUTPUT,R40,15,0
+DIN=INPUT,L80,15,0
+AD=OUTPUT,R80,15,0
+XAD=OUTPUT,R120,15,0
+READ=OUTPUT,R160
+WORD=OUTPUT,R200
+RDY=INPUT,L120

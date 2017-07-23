@@ -1,0 +1,45 @@
+// Veriwell project file
+-k nokey
+-l vw.log
+-s
+//#@L {system}		[Project Font Face]
+//#@l 10		[Project Font Size]
+//#@C {courier}		[Console Font Face]
+//#@c 9		[Console Font Size]
+//#@F {courier}		[Editor Font Face]
+//#@f 9		[Editor Font Size]
+//#@T 4		[space/tab]
+//#@U 5		[undo depth]
+//#@B 65536		[console buffer size]
+//#@E 0		[clear on run flag]
+//#@a 0		[show line number flag]
+//#@Y {system}		[Wave Font Face]
+//#@y 10		[Wave Font Size]
+//#@1	{255,0,0}	[x color]
+//#@2	{0,255,0}	[z color]
+//#@3	{255,0,0}	[undefined color]
+//#@4	{255,0,0}	[mixed color]
+//#@5	{255,0,0}	[cursor1 color]
+//#@6	{0,0,255}	[cursor2 color]
+//#@7	{255,255,255}	[edge color]
+//#@8	{0,255,0}	[value color]
+//#@Q	{0,0,255}	[keyword color]
+//#@q	{0,110,0}	[comment color]
+//#@R	{255,0,0}	[systask color]
+//#@r	{255,0,0}	[line number color]
+//#@S 478,800		[Project window size]
+//#@P 22,22		[Project window position]
+//#@s 729,1032		[Console window size]
+//#@p -25,-6		[Console window position]
+xsoc_tb.v
+xsoc.v
+xr16.v
+ctrl.v
+datapath.v
+ram16s.v
+ram16x1s.v
+memctrl.v
+xio.v
+xram16.v
+vga.v
+sram32kx8.v

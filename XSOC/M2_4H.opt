@@ -1,0 +1,12 @@
+[general]
+$file=M2_4H.sch
+short_comment=
+long_comment=4-bit 2-to-1 multiplexor, floorplanned 2Rx2C HMAP
+reference=U
+ref_visible=1
+bbox=200,160
+[ports]
+A=INPUT,L120,3,0
+B=INPUT,L80,3,0
+SEL=INPUT,L40
+O=OUTPUT,R120,3,0
